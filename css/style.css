@@ -3,24 +3,19 @@ body {
     font-family: 'Roboto Condensed', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #ededed;
+    background-color: #bacfb8;
     color: #333;
   }
   
   /* Header styles */
   header {
-    background-color: #4CAF50;
+    background-color: #18521a;
     color: white;
     padding: 20px 0;
     text-align: center;
   }
   
-  .header-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-  }
+  
   
   header h1 {
     font-family: 'Cinzel Decorative', serif;
@@ -28,8 +23,14 @@ body {
     margin: 0;
   }
   
+  .main-content h2 {
+    font-family: 'Cinzel Decorative', serif;
+    font-size: 2.5rem;
+    margin: 0;
+  }
+
   header img {
-    height: 50px;
+    height: 75px;
     margin-left: 20px;
   }
   
@@ -62,10 +63,18 @@ body {
     text-decoration: underline;
   }
   
-  /* Main content styles */
-  main {
-    padding: 20px;
+   /* Main styles */
+  .main-content {
+    display: flex;
+    gap: 20px; /* Space between main text and sidebar */
+    align-items: flex-start;
   }
+
+  .main-content, .image-sidebar, .welcome-text {
+    border: 10px solid rgb(126, 192, 72);
+    padding: 10px;
+  }
+  
   
   .main-wrapper {
     display: flex;
@@ -73,41 +82,52 @@ body {
     gap: 20px;
     max-width: 1200px;
     margin: 0 auto;
+    
+  }
+
+  .content-wrapper {
+    display: flex;
+    gap: 20px; /* Space between columns */
   }
   
   .welcome-text {
-    flex: 3;
-    min-width: 300px;
+    flex: 2;
+    padding: 20px;
   }
   
-  .welcome-text h2 {
-    font-family: 'Cinzel Decorative', serif;
-    font-size: 2rem;
-    margin-top: 0;
-  }
-  
+   /* Image styles */
   .image-sidebar {
     flex: 1;
-    min-width: 200px;
+    padding: 20px;
+    text-align: center;
   }
   
   .image-sidebar h2 {
-    font-family: 'Cinzel Decorative', serif;
-    font-size: 2rem;
-    margin-top: 0;
+    text-align: center;
+    grid-column: span 2; /* Makes the header span both columns */
+    margin-bottom: 15px; /* Adds space below the header */
+    width: 100%;
+    border-bottom: 3px solid black;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
   }
   
   .image-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 10px;
+    grid-template-columns: repeat(2, 1fr); /* 2 equal columns */
+    gap: 10px; /* Adds space between images */
+    justify-content: center;
+    align-items: start; /* Aligns images properly */
+    width: fit-content; /* Prevents unwanted stretching */
+    margin: 0 auto; /* Centers the grid */
   }
   
   .image-grid img {
-    width: 100%;
+    width: 150px;
     height: auto;
-    border-radius: 5px;
+    border: 2px solid black;
   }
+  
   
   /* Footer styles */
   footer {
