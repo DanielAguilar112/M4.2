@@ -1,8 +1,8 @@
 # web-dev-starter
 
-This is a starter project for web development with no frameworks and minimal
-dependencies. It is intended to be a starting point for web development projects
-that are written in plain HTML, CSS, and JavaScript.
+This is a a simple project about taking the content for the homepage of 
+a bird watching website and making it look good. To run it head over to 
+the index.html file and run it with the liveserver.
 
 ## Getting Started
 
